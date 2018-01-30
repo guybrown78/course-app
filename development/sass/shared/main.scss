@@ -1,0 +1,224 @@
+html {
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.3em;
+    color:$grey-dark;
+}
+
+select,input,textarea{
+    color:$grey-dark;
+}
+
+body, html{
+    height: 100%;
+}
+
+
+:focus{
+    outline: 0;
+    /* or */
+    outline: none;
+}
+
+menu, ol, ul {
+    padding: 0;
+}
+
+
+body{
+    font-family: /*Helvetica,*/Arial,sans-serif; 
+    margin:0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    div#pageContent{
+        .initialising-application{
+            display: none;
+        }
+    }
+    &.scroll-disabled{
+        overflow-y: hidden;
+    }
+}
+@-ms-viewport{
+  width: device-width;
+}
+body.initialising-application-wrapper{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    div#pageContent{
+        display: flex;
+        flex: 1;
+        .initialising-application{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width:100%;
+            .polite-message{
+                flex: 1;
+                max-width: 50%;
+                @include apply-note-text($textAlign:center);
+            }
+        }
+    }
+}
+
+button{
+    border: 0 none;
+    /*color:$white;
+    cursor:pointer;*/
+    @include simple-button;
+}
+a[role="button"],
+a.view-button,
+a.action-button,
+a.button{
+    margin:0;
+    outline: 0; 
+    display:block;
+    text-decoration: none; 
+}
+a.action-button{color:$white;}
+.action-button, .view-button{
+     @at-root div#{&} {
+        @include simple-button;
+    }
+    text-align:center;
+    border-radius: 2px;
+    margin-right: 10px;
+    padding: 7.5px;
+    &:last-child{
+        margin-right:0;
+    }
+    @media #{$screen-less-than-large}{ 
+        padding:10px;
+    }
+    span .notifications{
+        //
+    }
+}
+
+.action-button{
+    background-color: $pink-medium;
+    &:hover, &:active, &:focus{
+        background-color: $pink-light;
+    } 
+}
+
+.view-button{
+    background-color: $aqua-dark;
+    &:hover, &:active, &:focus{
+        background-color: $aqua-medium;
+    } 
+}
+.header-wrapper {
+    @include apply-content-padding;
+    background-color: $blue-dark;
+    .header-content{
+        @include table-flexbox-grid($width:100%);  
+        height: 75px;
+        @media #{$screen-small}{
+            height: 60px;
+        } 
+    }
+}
+
+h1, h2{
+    font-size:1.4em;
+    color:$grey-dark;
+    font-weight:400;
+}
+h3{
+    font-size:1.3em;
+    color:$grey-dark;
+    font-weight:400;
+}
+h4{
+    font-size:1.1em;
+    color:$grey-dark;
+    font-weight:400;
+    margin:0.4em 0;
+}
+
+object {
+    pointer-events: none;
+}
+
+article.page-container,
+article.portfolio-container,
+article.admin-container
+{
+    @include apply-content-padding;
+}
+
+.button-content-wrapper p{
+    float: left;
+    margin: 8px auto;
+    vertical-align: middle;
+}
+
+.button-icons{
+    display: inline-block;
+    height: 27px;
+    vertical-align: middle;
+    width: 27px;
+    padding: 5px 0 5px 5px;
+    float:right;
+}
+
+.grid{
+   @include apply-flexbox-grid;
+   @include flexbox-row;
+                @media #{$screen-less-than-large}{
+                @include flexbox-column;
+            }
+}
+
+.no-data{
+    padding:$component-padding;
+    text-align: center;
+    font-style: italic;
+}
+.data-error{
+    padding:$component-padding;
+    text-align: center;
+    font-style: italic;
+    color: $pink-dark;
+}
+[class*='block-']{
+     padding:$component-padding 0;
+}
+
+ul.horizontal-list
+{
+    @include apply-horizontal-list;
+}
+
+.hide{
+    display:none!important;
+}
+
+.spinner-with-background:before {
+    content: '';
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background-color:rgba(0,0,0,0.8);
+}
+.spinner-with-background{
+}
+.spinner-background {
+    content: '';
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background-color:rgba(255,255,255,0.3);
+}
+

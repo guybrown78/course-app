@@ -1,0 +1,91 @@
+
+$toggleButtonWidth: 30px;
+
+article.section-stack{
+    .grid{
+        .flex-column{
+            //.section-stack-item{
+                @include flexbox-row;
+                -webkit-flex-flow: row wrap;
+                justify-content: flex-start;
+                align-items: stretch;
+                width:100%;
+
+                .action-button.toggle-open-close{
+                    margin-right:0;
+                    width:$toggleButtonWidth;
+                    height:$toggleButtonWidth;
+                    border-radius: 3px 0px 0px 3px;
+                }
+
+                .section-stack-container{
+                    @include flex-1;
+                    @include apply-section-window-wrapper($contentBackgroundColour:$white, $applyContentPadding:true, $applyPadding:true);
+                    &.closed{
+                        padding:0;
+                        header,
+                        .content{
+                            display:none;
+                        }
+                    }
+                    header
+                    {
+                        @include flexbox-row;
+                        width:100%;
+                        border-bottom:solid 3px $white;
+                        min-height:$toggleButtonWidth;
+                        //
+                        .cel-title{
+                            @include apply-internal-padding;
+                            @include flex-1;
+                        }
+                    }
+                    .content{
+                        //
+                    }
+
+                } // END .section-stack-container
+           // } // END .section-stack-item
+        } // END .flex-column
+        
+        &.slider,
+        &.slide-enabled{
+            .flex-column{
+                .action-button.toggle-open-close{
+                    .open{
+                        @include apply-arrow($direction:"left", $colour:$white, $size:0.5em, $oppositeDirectionSize:0.8em);
+                    }
+                    .closed{
+                        @include apply-arrow($direction:"right", $colour:$white, $size:0.5em, $oppositeDirectionSize:0.8em);
+                    }
+                }
+            }
+        }
+        &.dual-focus{
+            @media #{$screen-less-than-large}{
+                .flex-column{
+                    .action-button.toggle-open-close{
+                        .open{
+                            @include apply-arrow($direction:"left", $colour:$white, $size:0.5em, $oppositeDirectionSize:0.8em);
+                        }
+                        .closed{
+                            @include apply-arrow($direction:"right", $colour:$white, $size:0.5em, $oppositeDirectionSize:0.8em);
+                        }
+                    }
+                }
+            }
+            @media #{$screen-greater-than-medium}{
+                .flex-column{
+                    .action-button.toggle-open-close{
+                        .open{
+                            @include apply-arrow($direction:"right", $colour:$white, $size:0.5em, $oppositeDirectionSize:0.8em);
+                        }
+                        .closed{
+                            @include apply-arrow($direction:"left", $colour:$white, $size:0.5em, $oppositeDirectionSize:0.8em);
+                        }
+                    }
+                }
+            }
+        }
+    } // END .grid
+} // END article.section-stack

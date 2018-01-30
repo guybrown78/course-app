@@ -1,0 +1,75 @@
+/* colour variables for consistency - can be changed here and applied everywhere */
+
+$white:#FFF;
+$aqua-light:#85c2c2;
+$aqua-medium:#339999;
+$aqua-dark:#008080;
+$blue-light:#718892;
+$blue-medium:#2f7599;
+$blue-dark:#1C3848;
+$gold-light:#e8d29d;
+$gold:#d8b45b;
+$green-medium:#8bb99c;
+$grey-extra-light:#f4f4f4;
+$grey-light:/*#d8d8d8;*/#e2e2e2;
+$grey-medium:#8a8a8a;
+$grey-dark:#4e4e4e;
+$maroon-medium:#642249;
+$orange-light:#fcc888;
+$orange-medium:#f8a139;
+$orange-dark:#fa8800;
+$pink-extra-light:#ebb2cf;
+$pink-light:#d7659f;
+$pink-medium:#cd3e87;
+$pink-dark:#a84444;
+$violet-medium:#86608B;
+$yellow-medium:#ffb204;
+
+$notification-mustard:#a06600;
+$notification-circle:#642249;
+
+$blue-royal:#2f7599;
+$green-bright:#0f0;
+
+/* user role group colours */
+$role-colour-candidate:$aqua-dark;
+$role-colour-assessor:$maroon-medium;
+$role-colour-ta:$maroon-medium;
+$role-colour-iqa:$violet-medium;
+$role-colour-liqa:$violet-medium;
+$role-colour-ewa:$aqua-dark;
+$role-colour-accounts:$blue-royal;
+$role-colour-centre:$blue-royal;
+$role-colour-misc:$blue-royal;
+
+/** variables for colours used for particular areas
+role-colours is a sass list of colours that relate to a role id
+sass list indices start at 1 **/
+$main-background-colour:$white;
+$inner-component-background-colour:$white;
+$main-foreground-colour:$grey-medium;
+$main-header-colour:$blue-dark;
+$tree-highlight-colour:$gold;
+$role-colours:$aqua-dark $pink-medium $aqua-dark $orange-medium $blue-medium;
+
+
+
+/* spacer variables for consistency */
+$spacer:10px;
+$horizontal-padding:0.5em;
+$vertical-padding:0.5em;
+$component-padding:0.5em;
+/* screen centred padding */
+$screen-centred-padding-small:0.8em;
+$screen-centred-padding-medium:1em;
+$screen-centred-padding-large:1.2em;
+
+/*media query threshold variables*/
+
+/* Desktop / device threshhold */
+$screen-small:'only screen and (max-width: 479px)';
+$screen-medium:'only screen and (min-width: 480px) and (max-width: 959px)';
+$screen-large:'only screen and (min-width: 960px)';
+$screen-greater-than-small:'only screen and (min-width: 480px)';
+$screen-greater-than-medium:'only screen and (min-width: 960px)';
+$screen-less-than-large:'only screen and (max-width: 959px)';

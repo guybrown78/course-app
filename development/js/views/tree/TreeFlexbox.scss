@@ -1,0 +1,110 @@
+
+@mixin set-tree-node-item($borderRight:$grey-medium, $borderBottom:$grey-medium, $includeStandardPseudos:true){
+    @include set-flex-box;
+    
+    flex-direction: row;
+    -webkit-flex-flow: row wrap;
+    justify-content: flex-start;
+    
+    align-items: stretch;
+
+    width:100%;
+    
+    [class*='cel-'] {
+            border-top: solid 1px $grey-light; margin-top: -1px; //new styles
+
+        display: block;
+        @if $borderBottom != null {
+            border-bottom:solid 1px $borderBottom;
+        }
+        @if $borderRight != null {
+            border-right:solid 1px $borderRight;
+        }
+    }
+    /*@if $includeStandardPseudos == true {
+        &:hover{
+            [class*='cel-']{
+                background-color: lighten($grey-light, 5%);
+            }
+        }
+        &.selected{
+            [class*='cel-']{
+                background-color:$gold;
+            }
+       }
+    }*/
+}
+@mixin set-flex-box(){
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.tree-node-item{
+    
+    @include set-tree-node-item(/*$borderRight:$grey-medium, $borderBottom:$grey-medium*/$borderRight:$grey-light, $borderBottom:$grey-light);
+
+    
+    .cel-depth{
+        border-bottom:none;
+        border-top:none;
+    }
+    [class*='cel-depth-'] {
+        border-bottom:none;
+        border-top:none;
+    }
+    .cel-arrow{
+        
+        border-top: 1px solid $grey-light; margin-top: -1px;//new styles
+
+        display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+
+	align-items: center;
+
+        width:20px;
+        div{
+            margin:0 auto;
+            &.open{
+                @include apply-arrow($direction:"down", $colour:/*$pink-medium*/$grey-medium, $size:0.5em, $oppositeDirectionSize:0.8em);
+            }
+            &.closed{
+                @include apply-arrow($direction:"right", $colour:/*$pink-medium*/$grey-medium, $size:0.5em, $oppositeDirectionSize:0.8em);
+            }
+       }
+    }
+    
+    .cel-display-name{
+        @include apply-internal-padding;
+        @include flex-1;//flex:1;
+    }
+    .cel-generic-count{
+        @include apply-internal-padding;
+    }
+
+}
+
+.tree-node-item-children{
+    @include apply-vertical-list($itemsAsTable:false);
+    
+    li.loading{
+        background-color:$grey-extra-light;
+        //
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        //
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        border-right:solid 1px $grey-light;
+    }
+}

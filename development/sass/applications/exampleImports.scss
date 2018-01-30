@@ -1,0 +1,17 @@
+//clientReport Application Setup
+
+//import all scss used in clientReport application
+//control source load order
+//only requires one file to be called for sass build
+
+@import '../shared/variables.scss';
+@import '../shared/mixins.scss';
+//@import '../shared/flexboxMixins.scss';
+@import '../shared/main.scss';
+//
+// Page layout
+@import '../../js/views/sectionsStack/SectionsStack.scss';
+@import '../../js/views/sectionsStack/section/BaseSection.scss';
+@import '../../js/views/tree/TreeFlexbox.scss';
+@import '../../example/sass/example.scss';
+

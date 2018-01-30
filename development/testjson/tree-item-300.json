@@ -1,0 +1,65 @@
+{
+	"itemId": 300,
+	"parentId": 1,
+	"depth": 2,
+	"childrenCount": 6,
+	"children": [{
+                        "genericCount": 7,
+			"itemId": 301,
+			"displayName": "node 1",
+			"parentId": 300,
+			"depth": 3,
+			"childrenCount": 0,
+			"canEdit": true,
+			"children": null
+		},
+		{
+                        "genericCount": 2,
+			"itemId": 302,
+			"displayName": "node 2",
+			"parentId": 300,
+			"depth": 3,
+			"childrenCount": 0,
+			"canEdit": true,
+			"children": null
+		}, {
+                        "genericCount": 6456,
+			"itemId": 303,
+			"displayName": "node 3",
+			"parentId": 300,
+			"depth": 3,
+			"childrenCount": 6,
+			"canEdit": true,
+			"children": null
+		}, {
+                        "genericCount": 2,
+			"itemId": 304,
+			"displayName": "node 4",
+			"parentId": 300,
+			"depth": 3,
+			"childrenCount": 0,
+			"canEdit": true,
+			"children": null
+		}, {
+                        "genericCount": 34,
+			"itemId": 305,
+			"displayName": "node 5",
+			"parentId": 300,
+			"depth": 3,
+			"childrenCount": 0,
+			"canEdit": true,
+			"children": null
+		}, {
+                        "genericCount": 86,
+			"itemId": 306,
+			"displayName": "node 6",
+			"parentId": 300,
+			"depth": 3,
+			"childrenCount": 0,
+			"canEdit": true,
+			"children": null
+		}]
+}
+
+
+

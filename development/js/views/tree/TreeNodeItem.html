@@ -1,0 +1,14 @@
+<div class="tree-node-item" data-id="<%=itemId%>">
+    <div class="cel-depth" style="width: <%= depth * depthIndent %>px"></div>
+    <% if(childrenCount > 0){ %>
+    <div class="cel-arrow">
+        <div class="<% if( isOpen == true ){ %>open<% } else { %>closed<% } %>"></div>
+    </div>
+    <% } %>
+    <div class="cel-display-name active-select-area">
+        <%= displayName %>
+    </div>
+    <div class="cel-generic-count active-select-area">
+        <%= genericCount %>
+    </div>
+</div>

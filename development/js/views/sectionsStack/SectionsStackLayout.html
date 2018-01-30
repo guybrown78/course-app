@@ -1,0 +1,17 @@
+<article id="<%=articleId%>" class="page-container section-stack">
+
+    <header>
+        <h2><%=pageTitle%></h2>
+    </header>
+
+    <div class="grid <%=gridClass%> <%=gridType%>" data-focused-item-ordinal="<%=sectionsStack[currentFocusedIndex].ordinal%>" data-focused-index="<%=currentFocusedIndex%>">
+        <% _.each(sectionsStack, function(item, index){ %>
+        <div class="flex-column <%=item.class%>" data-item-ordinal="<%=item.ordinal%>" data-index="<%=index%>">
+            <!--<section class="section-stack-item">
+
+            </section>-->
+        </div>
+        <% }) %>
+    </div>
+    
+</article>

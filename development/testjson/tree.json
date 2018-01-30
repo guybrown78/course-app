@@ -1,0 +1,10 @@
+{
+    "genericCount": 5,
+    "itemId": 1,
+    "displayName": "Root level Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "parentId": 0,
+    "depth": 1,
+    "childrenCount": 6,
+    "canEdit": true,
+    "children": []
+}

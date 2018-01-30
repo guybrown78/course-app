@@ -1,0 +1,9 @@
+
+<div class="secondary-section-example">
+    <h4>Item <%= displayName %></h4>
+    <form>
+        <label for="generic-count-increment">Increment the item's count</label>
+        <input name="generic-count-increment" type="number" step="1" value="<%= genericCount %>" <% if(!canEdit){ %> disabled readonly<% } %>>
+    </form>
+</div>
+
