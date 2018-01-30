@@ -64,6 +64,8 @@ $screen-centred-padding-small:0.8em;
 $screen-centred-padding-medium:1em;
 $screen-centred-padding-large:1.2em;
 
+$thick-border:.7em;
+
 /*media query threshold variables*/
 
 /* Desktop / device threshhold */
@@ -73,3 +75,4 @@ $screen-large:'only screen and (min-width: 960px)';
 $screen-greater-than-small:'only screen and (min-width: 480px)';
 $screen-greater-than-medium:'only screen and (min-width: 960px)';
 $screen-less-than-large:'only screen and (max-width: 959px)';
+

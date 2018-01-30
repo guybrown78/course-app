@@ -1,0 +1,49 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 30, 2018, 8:12:38 PM
+    Author     : Guy
+*/
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  
+  .product-card {
+    padding: 2%;
+    margin: 2%;
+    flex-grow: 1;
+    flex-basis: 16%;
+
+    display: flex; /* so child elements can use flexbox stuff too! */
+    flex-direction: column;
+    
+    border: solid $thick-border $grey-light;
+    
+    .product-image{
+        img {
+            max-width: 100%;
+        }
+    }
+    .product-info {
+        margin-top: auto;
+    }
+    
+    @media #{$screen-less-than-large}{
+        flex: 1 21%;
+    }
+    @media #{$screen-medium}{
+        flex-direction: row;
+    }
+  }// END .product-card
+  @media #{$screen-less-than-large}{
+    flex-direction: column;
+  }
+
+}// END section.products
+
+
+

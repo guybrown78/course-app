@@ -709,4 +709,39 @@ article.section-stack .grid.slider .flex-column .action-button.toggle-open-close
     flex-direction: row;
     border-right: solid 1px #e2e2e2; }
 
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 30, 2018, 8:12:38 PM
+    Author     : Guy
+*/
+.products {
+  display: flex;
+  flex-wrap: wrap; }
+  .products .product-card {
+    padding: 2%;
+    margin: 2%;
+    flex-grow: 1;
+    flex-basis: 16%;
+    display: flex;
+    /* so child elements can use flexbox stuff too! */
+    flex-direction: column;
+    border: solid 0.7em #e2e2e2; }
+    .products .product-card .product-image img {
+      max-width: 100%; }
+    .products .product-card .product-info {
+      margin-top: auto; }
+    @media only screen and (max-width: 959px) {
+      .products .product-card {
+        flex: 1 21%; } }
+    @media only screen and (min-width: 480px) and (max-width: 959px) {
+      .products .product-card {
+        flex-direction: row; } }
+  @media only screen and (max-width: 959px) {
+    .products {
+      flex-direction: column; } }
+
 /*# sourceMappingURL=exampleApp.css.map */
